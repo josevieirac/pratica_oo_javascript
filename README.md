@@ -1,3 +1,6 @@
+# Estrutura do Projeto
+
+```text
 pratica_oo_javascript/
 │
 ├── src/
