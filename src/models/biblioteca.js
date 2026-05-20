@@ -9,6 +9,10 @@ export class Biblioteca {
         this.livros.push(livro);
     }
 
+    removerLivro(titulo, autor) {
+        this.livros = this.livros.filter(livro => !(livro.titulo === titulo && livro.autor === autor));
+    }   
+
     cadastrarUsuario(usuario) {
         this.usuarios.push(usuario);
     }
