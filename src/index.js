@@ -23,3 +23,6 @@ funcionario.aprovarEmprestimo(usuario, livro1);
 EmprestimoService.realizarEmprestimo(usuario, livro1);
 
 console.log(usuario.listarLivros());
+
+const resultadoBusca = biblioteca.buscarLivrosPorTitulo("JavaScript Patterns");
+console.log(resultadoBusca);

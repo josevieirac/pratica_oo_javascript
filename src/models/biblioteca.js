@@ -16,4 +16,9 @@ export class Biblioteca {
     listarLivrosDisponiveis() {
         return this.livros.filter(livro => livro.disponivel);
     }
+
+    buscarLivrosPorTitulo(tituloBuscado) {
+        const livroEncontrado = this.livros.find(livro => livro.titulo === tituloBuscado);
+        return livroEncontrado;
+    }
 }
