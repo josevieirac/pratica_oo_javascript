@@ -1,8 +1,11 @@
 export class Livro {
+    #titulo;
+    #autor;
+
     constructor(titulo, autor) {
-        this.titulo = titulo;
-        this.autor = autor;
-        this.disponivel = true;
+        this.#titulo = titulo;
+        this.#autor = autor;
+        this.#disponivel = true;
     }
 
     emprestar() {
