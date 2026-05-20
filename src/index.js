@@ -23,3 +23,9 @@ funcionario.aprovarEmprestimo(usuario, livro1);
 EmprestimoService.realizarEmprestimo(usuario, livro1);
 
 console.log(usuario.listarLivros());
+
+console.log(biblioteca.livros);
+
+biblioteca.removerLivro({titulo:'javaScript Patterns'});
+
+console.log(biblioteca.livros);
