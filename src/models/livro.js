@@ -3,6 +3,10 @@ export class Livro {
         this.titulo = titulo;
         this.autor = autor;
         this.disponivel = true;
+
+        if (this.autor === "") {
+            throw new Error ("livro sem autor")
+        }
     }
 
     emprestar() {
