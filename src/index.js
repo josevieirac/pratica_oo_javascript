@@ -1,4 +1,4 @@
-import { Biblioteca } from "./models/Biblioteca.js";
+import { Biblioteca } from "./models/biblioteca.js";
 import { Livro } from "./models/Livro.js";
 import { Usuario } from "./models/Usuario.js";
 import { Funcionario } from "./models/Funcionario.js";
@@ -23,3 +23,11 @@ funcionario.aprovarEmprestimo(usuario, livro1);
 EmprestimoService.realizarEmprestimo(usuario, livro1);
 
 console.log(usuario.listarLivros());
+
+console.log('\n Livros disponiveis antes da remoção: ');
+console.log(biblioteca.livros);
+
+biblioteca.removerLivro(livro1);
+
+console.log('\n Livros disponiveis após a remoção: ');
+console.log(biblioteca.livros);
