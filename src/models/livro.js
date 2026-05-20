@@ -1,9 +1,15 @@
 export class Livro {
-    constructor(titulo, autor) {
+    isbn;
+    constructor(titulo, autor, isbn) {
         this.titulo = titulo;
         this.autor = autor;
+        this.isbn = isbn;
         this.disponivel = true;
     }
+
+    /*get isbn() {
+        return this.#isbn;
+    }*/
 
     emprestar() {
         if (!this.disponivel) {

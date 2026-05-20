@@ -6,8 +6,8 @@ import { EmprestimoService } from "./services/EmprestimoService.js";
 
 const biblioteca = new Biblioteca("Biblioteca Central");
 
-const livro1 = new Livro("Clean Code", "Robert Martin");
-const livro2 = new Livro("JavaScript Patterns", "Stoyan Stefanov");
+const livro1 = new Livro("Clean Code", "Robert Martin", "978-8576082675");
+const livro2 = new Livro("JavaScript Patterns", "Stoyan Stefanov", "857522266X");
 
 biblioteca.adicionarLivro(livro1);
 biblioteca.adicionarLivro(livro2);
@@ -23,3 +23,8 @@ funcionario.aprovarEmprestimo(usuario, livro1);
 EmprestimoService.realizarEmprestimo(usuario, livro1);
 
 console.log(usuario.listarLivros());
+
+const livrosDisponiveis= biblioteca.listarLivrosDisponiveis();
+
+console.log(`\n Livros Disponíveis na ${biblioteca.nome}: (${livrosDisponiveis.length} encontrado(s))`);
+console.log(livrosDisponiveis);
