@@ -23,3 +23,11 @@ funcionario.aprovarEmprestimo(usuario, livro1);
 EmprestimoService.realizarEmprestimo(usuario, livro1);
 
 console.log(usuario.listarLivros());
+
+console.log('\n livros disponives antes da remocao:');
+console.log(biblioteca.livros);
+
+biblioteca.removerLivro(livro1);
+
+console.log('\n livros disponives depois da remocao:');
+console.log(biblioteca.livros);
