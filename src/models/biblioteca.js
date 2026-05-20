@@ -9,6 +9,10 @@ export class Biblioteca {
         this.livros.push(livro);
     }
 
+    removerLivro(livro) {
+        this.livros.pop(livro)  
+    }
+
     cadastrarUsuario(usuario) {
         this.usuarios.push(usuario);
     }
