@@ -3,6 +3,14 @@ export class Pessoa {
     #idade;
 
     constructor(nome, idade) {
+        if (!nome || nome.trim() === "") {
+            throw new Error("O nome não pode ser vazio");
+        }
+
+        if (idade < 18) {
+            throw new Error("Você deve ter mais de 18 anos para se cadastrar");
+        }
+        
         this.#nome = nome;
         this.#idade = idade;
     }
