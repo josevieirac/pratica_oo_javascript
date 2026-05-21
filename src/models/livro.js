@@ -1,6 +1,6 @@
 export class Livro {
     constructor(titulo, autor) {
-        if (autor === ""){
+        if (autor.trim() === "" || autor === null || autor === undefined){
             throw new Error("Insira o nome do autor ao cadastrar um novo livro");
         }
         this.titulo = titulo;

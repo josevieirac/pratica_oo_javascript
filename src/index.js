@@ -8,6 +8,7 @@ const biblioteca = new Biblioteca("Biblioteca Central");
 
 let livro1;
 let livro2;
+
 try{
 livro1 = new Livro("Clean Code", "Robert Martin");
 biblioteca.adicionarLivro(livro1);
@@ -23,7 +24,7 @@ biblioteca.adicionarLivro(livro2);
 
 
 try {
-const usuario = new Usuario("Carlos", 20);
+const usuario = new Usuario("Carlos", 25);
 const funcionario = new Funcionario("Ana", 30, "Bibliotecária");
 biblioteca.cadastrarUsuario(usuario);
 funcionario.aprovarEmprestimo(usuario, livro1);
