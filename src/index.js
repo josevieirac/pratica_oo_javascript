@@ -27,7 +27,12 @@ try {
 }
 biblioteca.cadastrarUsuario(usuario);
 
-const funcionario = new Funcionario("Ana", 30, "Bibliotecária");
+let funcionario;
+try {
+ funcionario = new Funcionario("Ana", 30, "Bibliotecária");
+}catch (error) {
+    console.error(error.message);
+}
 
 funcionario.aprovarEmprestimo(usuario, livro1);
 
