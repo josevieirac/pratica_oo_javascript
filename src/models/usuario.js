@@ -14,4 +14,14 @@ export class Usuario extends Pessoa {
     listarLivros() {
         return this.#livrosEmprestados;
     }
+
+    devolverLivro(livro) {
+        const index = this.#livrosEmprestados.indexOf(livro);
+
+        if (index !== -1) {
+            this.#livrosEmprestados.splice(index, 1);
+        }else {
+            throw new Error ("Este livro não está emprestado com este usuário. ")
+        }
+    }
 }

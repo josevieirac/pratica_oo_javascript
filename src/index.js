@@ -23,3 +23,11 @@ funcionario.aprovarEmprestimo(usuario, livro1);
 EmprestimoService.realizarEmprestimo(usuario, livro1);
 
 console.log(usuario.listarLivros());
+
+console.log('Lista de livros emprestados ao usuário antes da devolução: ')
+console.log(usuario.listarLivros());
+
+usuario.devolverLivro(livro1); 
+
+console.log('Lista de livros emprestados ao usuário após a devolução: ')
+console.log(usuario.listarLivros());
