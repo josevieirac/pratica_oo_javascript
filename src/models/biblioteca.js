@@ -20,4 +20,7 @@ export class Biblioteca {
     listarLivrosDisponiveis() {
         return this.livros.filter(livro => livro.disponivel);
     }
+    buscarLivroPorTitulo(titulo) {
+        return this.livros.find(livro => livro.titulo === titulo);
+    }   
 }
