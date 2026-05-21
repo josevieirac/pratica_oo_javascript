@@ -25,7 +25,11 @@ biblioteca.cadastrarUsuario(usuario);
 
 const funcionario = new Funcionario("Ana", 30, "Bibliotecária");
 
+const apresentar= funcionario.apresentar();
+console.log(apresentar);
+
 funcionario.aprovarEmprestimo(usuario, livro1);
+
 
 EmprestimoService.realizarEmprestimo(usuario, livro1);
 

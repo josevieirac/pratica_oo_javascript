@@ -11,4 +11,8 @@ export class Funcionario extends Pessoa {
             `${this.nome} aprovou o empréstimo do livro ${livro.titulo}`
         );
     }
+
+    apresentar () {
+        return `Olá, meu nome é ${this.nome} e eu trabalho como ${this.cargo}.`;
+    }
 }
