@@ -4,4 +4,8 @@ export class Audiobook extends Livro {
     constructor (titulo, autor) {
         super (titulo, autor);
     }
+
+    obterFormato() {
+        return ("Audio livro ");
+    }
 }

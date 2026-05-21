@@ -4,4 +4,8 @@ export class LivroFisico extends Livro {
     constructor (titulo, autor) {
         super (titulo, autor);
     }
+
+    obterFormato() {
+        return ("Livro físico");
+    }
 }
