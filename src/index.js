@@ -8,9 +8,14 @@ const biblioteca = new Biblioteca("Biblioteca Central");
 
 const livro1 = new Livro("Clean Code", "Robert Martin");
 const livro2 = new Livro("JavaScript Patterns", "Stoyan Stefanov");
+const livro3 = new Livro("JavaScript Patterns", "Stoyan Stefanov");
+const livro4 = new Livro("JavaScript Patterns", "Stoyan Stefanov");
 
 biblioteca.adicionarLivro(livro1);
 biblioteca.adicionarLivro(livro2);
+biblioteca.adicionarLivro(livro3);
+biblioteca.adicionarLivro(livro4);
+
 
 const usuario = new Usuario("Carlos", 25);
 
@@ -23,3 +28,8 @@ funcionario.aprovarEmprestimo(usuario, livro1);
 EmprestimoService.realizarEmprestimo(usuario, livro1);
 
 console.log(usuario.listarLivros());
+
+usuario.emprestarLivro(livro2);
+usuario.emprestarLivro(livro3);
+
+usuario.emprestarLivro(livro4);
