@@ -6,17 +6,33 @@ import { EmprestimoService } from "./services/EmprestimoService.js";
 
 const biblioteca = new Biblioteca("Biblioteca Central");
 
-const livro1 = new Livro("Clean Code", "Robert Martin");
-const livro2 = new Livro("JavaScript Patterns", "Stoyan Stefanov");
+let livro1;
+let livro2;
+
+try{
+livro1 = new Livro("Clean Code", "Robert Martin");
+livro2 = new Livro("JavaScript Patterns", "Stoyan Stefanov");
+}catch (error) {
+    console.error(error.message);
+}
 
 biblioteca.adicionarLivro(livro1);
 biblioteca.adicionarLivro(livro2);
 
-const usuario = new Usuario("Carlos", 25);
-
+let usuario;
+try {
+ usuario = new Usuario("Carlos", 25);
+}catch (error) {
+    console.error(error.message);
+}
 biblioteca.cadastrarUsuario(usuario);
 
-const funcionario = new Funcionario("Ana", 30, "Bibliotecária");
+let funcionario;
+try {
+ funcionario = new Funcionario("Ana", 30, "Bibliotecária");
+}catch (error) {
+    console.error(error.message);
+}
 
 funcionario.aprovarEmprestimo(usuario, livro1);
 

@@ -1,8 +1,13 @@
 export class Livro {
-    constructor(titulo, autor) {
+    constructor(titulo, autor, isbn) {
         this.titulo = titulo;
         this.autor = autor;
+        this.isbn = isbn;
         this.disponivel = true;
+
+        if (!autor || autor.trim() === "") {
+            throw new Error("Autor do livro não pode ser vazio.");
+        }
     }
 
     emprestar() {
